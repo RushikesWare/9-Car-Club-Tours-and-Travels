@@ -1,0 +1,1644 @@
+<!-- <body> -->
+<div class="slider">
+    <img class="nature" src="../../../assets/img/slider/1.jpg" width="100%">
+    <img class="nature" src="../../../assets/img/slider/2.jpg" width="100%">
+    <img class="nature" src="../../../assets/img/slider/3.jpg" width="100%">
+    <img class="nature" src="../../../assets/img/slider/4.jpg" width="100%">
+</div>
+
+<div id="fixed-social">
+    <div>
+        <a href="https://www.facebook.com/9Car-Club-Tours-Travels-114478564067748" class="fixed-facebook"
+            target="_blank"><i class="fa fa-facebook"></i> <span>Facebook</span></a>
+    </div>
+    <div>
+        <a href="https://twitter.com/9Travels" class="fixed-twitter" target="_blank"><i class="fa fa-twitter"></i>
+            <span>Twitter</span></a>
+    </div>
+
+    <div>
+        <a href="https://www.linkedin.com/company/72615467/admin/" class="fixed-linkedin" target="_blank"><i
+                class="fa fa-linkedin"></i> <span>LinkedIn</span></a>
+    </div>
+    <div>
+        <a href="https://www.instagram.com/9carclub_tours/" class="fixed-instagrem" target="_blank"><i
+                class="fa fa-instagram"></i>
+            <span>Instagram</span></a>
+    </div>
+</div>
+<div id="fixed-social-call">
+    <div>
+        <a href="tel: +91 9325423346" class="fixed-call pulse-button"><i class="fa fa-phone"></i></a>
+    </div>
+</div>
+<div id="fixed-social-whatsapp">
+    <div>
+        <a href="https://api.whatsapp.com/send?phone=+91 9325423346" class="fixed-call-whatsapp pulse-button-w"><i
+                class="fa fa-whatsapp"></i> </a>
+    </div>
+</div>
+
+<div id="book-a-car">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="booka-car-content">
+                    <form   #bookingForm="ngForm" name="bookingForm" >
+
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h4>Book a Car </h4>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <label for="form-city">Name:*</label>
+                                <input type="text"  name="name"  id="name" [(ngModel)]="bookingModel.name"  class="form-control" placeholder=" Enter Your Name" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="Email">E-Mail:*</label>
+                                <input type="email" class="form-control" name="eaddress"  id="eaddress" [(ngModel)]="bookingModel.eaddress" name="eaddress" placeholder="Enter Your Email" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="mobile">Mobile No:*</label>
+                                <input type="email" class="form-control" name="mob"  id="mob" [(ngModel)]="bookingModel.mob" name="mob" placeholder="Enter Your Mob No." required>
+                            </div>
+                             <div class="col-md-6 form-group">
+                                <label for="to-city">Pick-Up Location: </label>
+                                <input type="text" class="form-control" name="pickup" id="pickup" [(ngModel)]="bookingModel.pickup"  placeholder="Pune" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="to-city">Drop Location: </label>
+                                <input type="text"  class="form-control" name="drop" id="drop" [(ngModel)]="bookingModel.drop" placeholder="Mumbai" required>
+                            </div>
+                            <div class="col-md-6 form-group ">
+                                <label for="pickup">Pick-Up Date: </label>
+                                <input type="date" class="form-control" name="pickupdate" id="pickupdate" [(ngModel)]="bookingModel.pickupdate"  placeholder="DD/MM/YYYY - HH:MM">
+                            </div>
+                            <div class="col-md-6 form-group ">
+                                <label for="pickup">Pick-Up Time: </label>
+                                <input type="time" class="form-control" name="pickuptime" id="pickuptime" [(ngModel)]="bookingModel.pickuptime"  placeholder="HH:MM">
+                            </div>
+                            <div class="col-md-12 form-group ">
+                                <label for="passangers">No of Passangers: </label>
+                                <input type="number" class="form-control" name="passangers" id="passangers" [(ngModel)]="bookingModel.passangers"  placeholder="Passangers">
+                            </div>
+                            <!-- <div class="col-md-6 form-group ">
+                                <label for="time">Car Type: </label>
+                                <select class="form-control"  name="cartype" id="cartype" [(ngModel)]="bookingModel.cartype" >
+                                    <option value="All Cars">Select</option>
+                                    <option value="Hatchback">HATCHBACK</option>
+                                    <option value="Sedan">SEDAN</option>
+                                    <option value="Suv car">SUV CAR</option>
+                                    <option value="Luxury">PREMIUM LUXURY</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group ">
+                                <label for="time">Journey Type: </label>
+                                <select  class="form-control"  name="journeytype" id="journeytype" [(ngModel)]="bookingModel.journeytype">
+                                    <option value="Select">Select</option>
+                                    <option value="One-Way">One Way</option>
+                                    <option value="Outstation">Outstation</option>
+                                    <option value="local">Local</option>
+                                    <option value="airport">Airport</option>
+                                </select>
+                            </div>  -->
+
+                            <div class="col-md-12 form-group mt-2">
+                                <label for=""></label>
+                               <button class="btn  btn-lg" type="submit" style="background-color: #f34900; width: 100%;"  [disabled]="bookingModel.name == null || bookingModel.eaddress == null || bookingModel.mob == null" (click)="sendMail()"> Book Cab</button>
+                                <!-- <input type="submit" style="background-color: #f34900;"value="Book Cab" class="btn  btn-lg"> -->
+                            </div>
+                        </div>
+                    </form> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- slider are start -->
+<section class="Instagram-like-comments">
+    <div class="container-fluid">
+
+        <div class="col-md-12" id="user-section">
+            <div class="row slider-one">
+                <div class="col-lg-12">
+                    <div class="section-title  text-center">
+                        <h2 style="color: #f34900;">First Class Customised Tour Service</h2>
+                        <span class="title-line" style="color: black;"><b>We offer professional Tour services in
+                                wide
+                                range of destinations</b></span>
+                        <!-- <p>Welcome to Shree Ganesh Tours & Travels.</p> -->
+                    </div>
+                </div>
+                <div class="container" style=" margin-left: 2.5%;">
+
+                    <div class="card-slider">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="container mt-2 ">
+                                    <div class="item">
+                                        <div class="item-card card-block para">
+                                            <div class="username-top">
+                                                <!-- <i class="fa fa-pencil " aria-hidden="true"></i>
+                                           <img class="user-img" src="../../../../assets/images/terms.png"> -->
+                                                <!-- <p>Username <br> <span>Placehere</span></p> -->
+                                            </div>
+                                            <div class="card-body">
+                                                <img src="../../../../assets/img/Shirdi.jpg" alt="Photo of sunset">
+                                                <!-- <i class="fa fa-heart"></i>
+                                           <i class="fa fa-comment-o"></i> <br> -->
+                                                <!-- <p style="padding-top:25px; color:#f34900;"> <b>Shirdi Darshan</b></p> -->
+                                                <!-- <p class="like">10.328 Likes <br><span>Username instagram <a href="#">
+                                           #template</a></span></p> -->
+                                                <p class="shirdi-darshan-card">
+                                                    <b>Shirdi Darshan</b>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-bottom-slide mt-2">
+                                <div class="quantity">
+                                    <!-- <a href="#" class="quantity__minus minus1"> -->
+                                    <!-- <span class="fa fa-angle-left"></span></a> -->
+                                    <!-- <input name="quantity1" type="text" class="quantity__input1" value="1"> -->
+                                    <!-- <a href="#" class="quantity__plus plus1"><span class="fa fa-angle-right"></span></a>  -->
+                                </div>
+                                <!-- <div class="select mt-2">
+                               <select name="slct" id="slct">
+                                 <option selected >10 * 10</option>
+                                 <option value="1">1</option>
+                                 <option value="2">2</option>
+                                 <option value="3">3</option>
+                               </select>
+                               </div> -->
+                                <!-- <div class="bottom-four mt-2">
+                               <p>100 unit</p>
+                               </div> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="container mt-2 ">
+                                    <div class="item">
+                                        <div class="item-card card-block para">
+                                            <div class="username-top">
+                                                <!-- <i class="fa fa-pencil " aria-hidden="true"></i> -->
+                                                <!-- <img class="user-img" src="../../../../assets/images/terms.png"> -->
+                                                <!-- <p>Username <br> <span>Placehere</span></p> -->
+                                            </div>
+                                            <div class="card-body">
+                                                <img src="../../../../assets/img/Aurab.jpg" alt="Photo of sunset">
+                                                <!-- <i class="fa fa-heart"></i>
+                                           <i class="fa fa-comment-o"></i> <br> -->
+                                                <!-- <p class="like">10.328 Likes <br><span>Username instagram <a href="#">
+                                           #template</a></span></p> -->
+                                                <p class="shirdi-darshan-card">
+                                                    <b>Aurangabad</b>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-bottom-slide mt-2">
+                                <!-- <div class="quantity">
+                               <a href="#" class="quantity__minus minus1">
+                                   <span class="fa fa-angle-left"></span></a>
+                               <input name="quantity1" type="text" class="quantity__input1" value="1">
+                               <a href="#" class="quantity__plus plus1"><span class="fa fa-angle-right"></span></a>
+                               </div> -->
+                                <!-- <div class="select mt-2">
+                               <select name="slct" id="slct">
+                                 <option selected >10 * 10</option>
+                                 <option value="1">1</option>
+                                 <option value="2">2</option>
+                                 <option value="3">3</option>
+                               </select>
+                               </div> -->
+                                <!-- <div class="bottom-four mt-2">
+                               <p>100 unit</p>
+                               </div> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="container mt-2 ">
+                                    <div class="item">
+                                        <div class="item-card card-block para">
+                                            <div class="username-top">
+                                                <!-- <i class="fa fa-pencil " aria-hidden="true"></i> -->
+                                                <!-- <img class="user-img" src="../../../../assets/images/terms.png"> -->
+                                                <!-- <p>Username <br> <span>Placehere</span></p> -->
+                                            </div>
+                                            <div class="card-body">
+                                                <img src="../../../../assets/img/Goai.jpg" alt="Photo of sunset">
+                                                <!-- <i class="fa fa-heart"></i>
+                                           <i class="fa fa-comment-o"></i> <br> -->
+                                                <!-- <p class="like">10.328 Likes <br><span>Username instagram <a href="#">
+                                           #template</a></span></p> -->
+                                                <p class="shirdi-darshan-card">
+                                                    <b>Goa</b>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-bottom-slide mt-2">
+
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="container mt-2 ">
+                                    <div class="item">
+                                        <div class="item-card card-block para">
+                                            <div class="username-top">
+                                                <!-- <i class="fa fa-pencil " aria-hidden="true"></i> -->
+                                                <!-- <img class="user-img" src="../../../../assets/images/terms.png"> -->
+                                                <!-- <p>Username <br> <span>Placehere</span></p> -->
+                                            </div>
+                                            <div class="card-body">
+                                                <img src="../../../../assets/img/Nashik.jpg" alt="Photo of sunset">
+                                                <!-- <i class="fa fa-heart"></i>
+                                           <i class="fa fa-comment-o"></i> <br> -->
+                                                <!-- <p class="like">10.328 Likes <br><span>Username instagram <a href="#">
+                                           #template</a></span></p> -->
+                                                <p class="shirdi-darshan-card">
+                                                    <b>Nashik</b>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-bottom-slide mt-2">
+                                <div class="quantity">
+                                    <!-- <a href="#" class="quantity__minus minus1"> -->
+                                    <!-- <span class="fa fa-angle-left"></span> -->
+                                    <!-- </a> -->
+                                    <!-- <input name="quantity1" type="text" class="quantity__input1" value="1"> -->
+                                    <!-- <a href="#" class="quantity__plus plus1"><span class="fa fa-angle-right"></span></a> -->
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="container mt-2 ">
+                                    <div class="item">
+                                        <div class="item-card card-block para">
+                                            <div class="username-top">
+                                                <!-- <i class="fa fa-pencil " aria-hidden="true"></i> -->
+                                                <!-- <img class="user-img" src="../../../../assets/images/terms.png"> -->
+                                                <!-- <p>Username <br> <span>Placehere</span></p> -->
+                                            </div>
+                                            <div class="card-body">
+                                                <img src="../../../../assets/img/kolhapur.jpg" alt="Photo of sunset">
+                                                <!-- <i class="fa fa-heart"></i>
+                                           <i class="fa fa-comment-o"></i> <br> -->
+                                                <!-- <p class="like">10.328 Likes <br><span>Username instagram <a href="#">
+                                           #template</a></span></p> -->
+                                                <p class="shirdi-darshan-card">
+                                                    <b>Kolhapur</b>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-bottom-slide mt-2">
+                                <div class="quantity">
+                                    <!-- <a href="#" class="quantity__minus minus1">
+                                  </a> -->
+                                    <!-- <input name="quantity1" type="text" class="quantity__input1" value="1"> -->
+                                    <!-- <a href="#" class="quantity__plus plus1"><span class="fa fa-angle-right"></span></a> -->
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="container mt-2 ">
+                                    <div class="item">
+                                        <div class="item-card card-block para">
+                                            <div class="username-top">
+                                                <!-- <i class="fa fa-pencil " aria-hidden="true"></i> -->
+                                                <!-- <img class="user-img" src="../../../../assets/images/terms.png"> -->
+                                                <!-- <p>Username <br> <span>Placehere</span></p> -->
+                                            </div>
+                                            <div class="card-body">
+                                                <img src="../../../../assets/img/Kokan.jpg" alt="Photo of sunset">
+                                                <!-- <i class="fa fa-heart"></i>
+                                           <i class="fa fa-comment-o"></i> <br> -->
+                                                <!-- <p class="like">10.328 Likes <br><span>Username instagram <a href="#">
+                                           #template</a></span></p> -->
+                                                <p class="shirdi-darshan-card">
+                                                    <b>Kokan</b>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-bottom-slide mt-2">
+                                <div class="quantity">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="container mt-2 ">
+                                    <div class="item">
+                                        <div class="item-card card-block para">
+                                            <div class="username-top">
+                                                <!-- <i class="fa fa-pencil " aria-hidden="true"></i> -->
+                                                <!-- <img class="user-img" src="../../../../assets/images/terms.png"> -->
+                                                <!-- <p>Username <br> <span>Placehere</span></p> -->
+                                            </div>
+                                            <div class="card-body">
+                                                <img src="../../../../assets/img/MalshejGha.jpg" alt="Photo of sunset">
+                                                <!-- <i class="fa fa-heart"></i>
+                                           <i class="fa fa-comment-o"></i> <br> -->
+                                                <!-- <p class="like">10.328 Likes <br><span>Username instagram <a href="#">
+                                           #template</a></span></p> -->
+                                                <p class="shirdi-darshan-card">
+                                                    <b>MalshejGhat</b>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-bottom-slide mt-2">
+                                <div class="quantity">
+                                    <!-- <a href="#" class="quantity__minus minus1">
+                                  </a> -->
+                                    <!-- <input name="quantity1" type="text" class="quantity__input1" value="1"> -->
+                                    <!-- <a href="#" class="quantity__plus plus1"><span class="fa fa-angle-right"></span></a> -->
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="container mt-2 ">
+                                    <div class="item">
+                                        <div class="item-card card-block para">
+                                            <div class="username-top">
+                                                <!-- <i class="fa fa-pencil " aria-hidden="true"></i> -->
+                                                <!-- <img class="user-img" src="../../../../assets/images/terms.png"> -->
+                                                <!-- <p>Username <br> <span>Placehere</span></p> -->
+                                            </div>
+                                            <div class="card-body">
+                                                <img src="../../../../assets/img/Mumbai.jpg" alt="Photo of sunset">
+
+                                                <p class="shirdi-darshan-card">
+                                                    <b>Mumbai</b>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="choose-car" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <!-- Section Title Start -->
+            <div class="col-lg-12 pt-5">
+                <div class="section-title  text-center">
+                    <h2 style="color: #f34900;">Choose your Car</h2>
+                    <span class="title-line"><i class="fa fa-car"></i></span>
+                </div>
+            </div>
+            <!-- Section Title End -->
+        </div>
+        <div class="row">
+            <!-- Choose Area Content Start -->
+            <div class="col-lg-12">
+                <div class="choose-content-wrap">
+                    <!-- Choose Area Tab Menu -->
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#popular_cars" role="tab"
+                                aria-selected="true">All</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#newest_cars" role="tab"
+                                aria-selected="false">Hatchback</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#office_map" role="tab"
+                                aria-selected="false">Sedan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#xcent" role="tab"
+                                aria-selected="false">suv</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#innova" role="tab"
+                                aria-selected="false">Luxury</a>
+                        </li>
+
+                    </ul>
+                    <!-- Choose Area Tab Menu -->
+                    <!-- Choose Area Tab content -->
+                    <div class="tab-content" id="myTabContent">
+                        <!-- Popular Cars Tab Start -->
+                        <div class="tab-pane fade show active" id="popular_cars" role="tabpanel"
+                            aria-labelledby="home-tab">
+                            <!-- Popular Cars Content Wrapper Start -->
+                            <div class="popular-cars-wrap">
+                                <br>
+                                <!-- PopularCars Tab Content Start -->
+                                <div class="row popular-car-gird">
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 con">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover" href="../../../assets/img/etios.jpg">
+                                                    <!-- <a class="car-hover" href="assets/img/car/etios.jpg"> -->
+                                                    <img src="../../../assets/img/car/etios.jpg"
+                                                        alt="9-car clubs Tours & Travel">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a>Etios</a>
+                                                </h3>
+                                                <h5>Hatchback<span style="float: right;">Sanitized Car</span></h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC/Non-AC</a>
+                                                    <button class="btn   bold login-trigger"
+                                                        style="margin: 5px; padding: 2px ; background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 3</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 con">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover" href="../../../assets/img/car/xcent.jpg">
+                                                    <img src="../../../assets/img/car/xcent.jpg"
+                                                        alt="9-car clubs Tours & Travel">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a>Xcent</a>
+                                                </h3>
+                                                <h5>Hatchback<span style="float: right;">Sanitized Car</span></h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC/Non-AC</a>
+                                                    <button class="btn bold login-trigger"
+                                                        style="margin: 5px; padding: 2px; background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 3</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 con">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover" href="../../../assets/img/car/swift.jpg">
+                                                    <img src="../../../assets/img/car/swift.jpg"
+                                                        alt="9-car clubs Tours & Travel">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a>Swift Desire</a>
+                                                </h3>
+                                                <h5>Hatchback<span style="float: right;">Sanitized Car</span></h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC/Non-AC</a>
+                                                    <button class="btn  bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 4</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 con suv mpv">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover" href="../../../assets/img/car/Ertica.png">
+                                                    <img src="../../../assets/img/car/Ertica.png" alt="JSOFT">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a>Ertica</a>
+                                                </h3>
+                                                <h5>Sedan Car <span style="float: right;">Sanitized Car</span></h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC/Non-AC</a>
+                                                    <button class="btn  bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 4</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 con suv mpv">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover">
+                                                    <img src="../../../assets/img/innova.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a>Innova</a>
+                                                </h3>
+                                                <h5>Sedan Car <span style="float: right;">Sanitized Car</span></h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC/Non-AC</a>
+                                                    <button class="btn bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 3</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 con suv mpv">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover">
+                                                    <img src="../../../assets/img/car/crista.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a>Innova crista</a>
+                                                </h3>
+                                                <h5>Sedan Car <span style="float: right;">Sanitized Car</span></h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC/Non-AC</a>
+                                                    <button class="btn old login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 3</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-6 con hat">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover">
+                                                    <img src="../../../assets/img/Xylo.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a> Mahindra Xylo </a>
+                                                </h3>
+                                                <h5>SUV Car <span style="float: right;">Sanitized Car</span></h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC/Non-AC</a>
+                                                    <button class="btn   bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 6</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-6 hat suv mpv">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover">
+                                                    <img src="../../../assets/img/car/bmw.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a> BMW </a>
+                                                </h3>
+                                                <h5> Premium Luxury Cars</h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC</a>
+                                                    <button class="btn   bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 3</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 hat suv mpv">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover">
+                                                    <img src="../../../assets/img/car/audi.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a> Audi </a>
+                                                </h3>
+                                                <h5> Premium Luxury Cars</h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC</a>
+                                                    <button class="btn   bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 3</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="newest_cars" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="popular-cars-wrap">
+                                <br>
+                                <div class="row newest-car-gird">
+                                    <div class="col-lg-4 col-md-6 con">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover" href="../../../assets/img/car/indica.jpg">
+                                                    <img src="../../../assets/img/car/indica.jpg"
+                                                        alt="9-car clubs Tours & Travel">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a>Tata Indica</a>
+                                                </h3>
+                                                <h5>Hatchback<span style="float: right;">Sanitized Car</span></h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC/Non-AC</a>
+                                                    <button class="btn   bold login-trigger"
+                                                        style="margin: 5px; padding: 2px ; background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 3</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 con">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover" href="assets/img/car/celerio.jpg">
+                                                    <img src="assets/img/car/celerio.jpg"
+                                                        alt="9-car clubs Tours & Travel">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a>celerio</a>
+                                                </h3>
+                                                <h5>Hatchback<span style="float: right;">Sanitized Car</span></h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC/Non-AC</a>
+                                                    <button class="btn   bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 3</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 con">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover" href="assets/img/car/polo.png">
+                                                    <img src="assets/img/car/polo.png" alt="9-car clubs Tours & Travel">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a>Volkswagen Polo</a>
+                                                </h3>
+                                                <h5>Hatchback<span style="float: right;">Sanitized Car</span></h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC/Non-AC</a>
+                                                    <button class="btn  bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 3</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                </div>
+                                <!-- NewestCars Tab Content End -->
+                            </div>
+                            <!-- Newest Cars Content Wrapper End -->
+                        </div>
+                        <!--  Tab -->
+                        <div class="tab-pane fade" id="office_map" role="tabpanel" aria-labelledby="contact-tab">
+                            <div class="popular-cars-wrap">
+                                <br>
+                                <!-- NewestCars Tab Content Start -->
+                                <div class="row newest-car-gird">
+                                    <br>
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 con suv mpv">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover">
+                                                    <img src="assets/img/Suzuki-Ciaz.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a>Suzuki Ciaz</a>
+                                                </h3>
+                                                <h5>Sedan Car <span style="float: right;">Sanitized Car</span></h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC/Non-AC</a>
+                                                    <button class="btn  bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 3</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 con suv mpv">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover">
+                                                    <img src="assets/img/Tata Indigo.webp" alt="JSOFT">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a>Tata Indigo</a>
+                                                </h3>
+                                                <h5>Sedan Car <span style="float: right;">Sanitized Car</span></h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC/Non-AC</a>
+                                                    <button class="btn   bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 3</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 con suv mpv">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover">
+                                                    <img src="assets/img/etios.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a>Toyota Etios</a>
+                                                </h3>
+                                                <h5>Sedan Car <span style="float: right;">Sanitized Car</span></h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC/Non-AC</a>
+                                                    <button class="btn   bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 3</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 hat sedan">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover">
+                                                    <img src="assets/img/swift-desire.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a>Swift Desire</a>
+                                                </h3>
+                                                <h5>Sedan Car <span style="float: right;">Sanitized Car</span></h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC/Non-AC</a>
+                                                    <button class="btn   bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 3</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 suv con mpv">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover">
+                                                    <img src="assets/img/xcent.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a> Hyundai Xcent</a>
+                                                </h3>
+                                                <h5>Sedan Car <span style="float: right;">Sanitized Car</span></h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC/Non-AC</a>
+                                                    <button class="btn   bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 3</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="xcent" role="tabpanel" aria-labelledby="contact-tab">
+                            <div class="popular-cars-wrap">
+                                <br>
+                                <div class="row newest-car-gird">
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 con hat">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover">
+                                                    <img src="/assets/img/car/marutiertiga.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a> Maruti Ertica </a>
+                                                </h3>
+                                                <h5>SUV Car <span style="float: right;">Sanitized Car</span></h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC/Non-AC</a>
+                                                    <button class="btn btn-warning  bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 6</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 con hat">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover">
+                                                    <img src="assets/img/Xylo.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a> Mahindra Xylo </a>
+                                                </h3>
+                                                <h5>SUV Car <span style="float: right;">Sanitized Car</span></h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC/Non-AC</a>
+                                                    <button class="btn  bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 6</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 con sedan mpv">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover">
+                                                    <img src="assets/img/innova.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a> Toyota Innova </a>
+                                                </h3>
+                                                <h5>SUV Car <span style="float: right;">Sanitized Car</span></h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC/Non-AC</a>
+                                                    <button class="btn   bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 6</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 hat suv mpv">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover">
+                                                    <img src="assets/img/innova-crysta2.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a> Innova Crysta </a>
+                                                </h3>
+                                                <h5>SUV Car <span style="float: right;">Sanitized Car</span></h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC/Non-AC</a>
+                                                    <button class="btn bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 6</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="innova" role="tabpanel" aria-labelledby="contact-tab">
+                            <br>
+                            <div class="popular-cars-wrap">
+                                <div class="row newest-car-gird">
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 hat suv mpv">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover">
+                                                    <img src="/assets/img/car/benz.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a> Mercedes Benz </a>
+                                                </h3>
+                                                <h5> Premium Luxury Cars</h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC</a>
+                                                    <button class="btn  bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 3</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 hat suv mpv">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover">
+                                                    <img src="/assets/img/car/bmw.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a> BMW </a>
+                                                </h3>
+                                                <h5> Premium Luxury Cars</h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC</a>
+                                                    <button class="btn   bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 3</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 hat suv mpv">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover">
+                                                    <img src="/assets/img/car/audi.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a> Audi </a>
+                                                </h3>
+                                                <h5> Premium Luxury Cars</h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC</a>
+                                                    <button class="btn   bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 3</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                    <!-- Single Popular Car Start -->
+                                    <div class="col-lg-4 col-md-6 hat suv mpv">
+                                        <div class="single-popular-car">
+                                            <div class="p-car-thumbnails">
+                                                <a class="car-hover">
+                                                    <img src="/assets/img/car/jaugwar.jpg" alt="JSOFT">
+                                                </a>
+                                            </div>
+                                            <div class="p-car-content">
+                                                <h3>
+                                                    <a> Jaguar </a>
+                                                </h3>
+                                                <h5> Premium Luxury Cars</h5>
+                                                <div class="p-car-feature">
+                                                    <a>AC</a>
+                                                    <button class="btn   bold login-trigger"
+                                                        style="margin: 5px; padding: 2px;background-color: #f34900;"
+                                                        routerLink="/pages/booknow">Book Now</button>
+                                                    <a>Seat capacity 3</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single Popular Car End -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--== Choose Car Area End ==-->
+<!--== What We Offer ==-->
+<section id="about-area" class="section-padding pricingplan">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title  text-center">
+                    <h2 style="text-transform: capitalize;color: #f34900;">Why Choose Us?</h2>
+                    <span class="title-line"><i class="fa fa-car"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="serviceBox">
+                    <div class="service-icon">
+                        <span><i class="fa fa-clock-o"></i></span>
+                    </div>
+                    <h3 class="title">24/7 Support</h3>
+                    <p class="description">For all safety concerns during your drive, we’re just a call away at any
+                        hour of the day.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="serviceBox purple">
+                    <div class="service-icon">
+                        <span><i class="fa fa-user-circle-o"></i></span>
+                    </div>
+                    <h3 class="title">Highly Trained Drivers</h3>
+                    <p class="description">We provide a Highly trained Drivers For Customers.
+                        <br>
+                        <br>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="serviceBox">
+                    <div class="service-icon">
+                        <span><i class="fa fa-car"></i></span>
+                    </div>
+                    <h3 class="title">
+                        Well Maintained Cars
+                    </h3>
+                    <p class="description">We Provide Well maintained car service in Pune with the best amenities
+                        and facilities.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="serviceBox purple">
+                    <div class="service-icon">
+                        <span><i class="fa fa-plus-square"></i></span>
+                    </div>
+                    <h3 class="title">SAFETY +</h3>
+                    <p class="description"> we have brought in a set of measures like Sanitized buses,
+                        mandatory masks etc. to ensure you travel safely.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-padding pb-5">
+    <div class="container pt-5 ">
+        <h2 style="text-align: center;color:#f34900">9 Car Club Tours and Travels Other Services:</h2>
+        <br><br>
+        <div class="ta">
+            <div class="row info">
+                <div class="col-md-6">
+                    <h4><i class="fa fa-car" style="color:#f34900" aria-hidden="true"></i>
+                        Rent a Luxury Car all india Daily Service.
+                    </h4>
+                    <br>
+                    <h4><i class="fa fa-car " style="color:#f34900" aria-hidden="true"></i>
+                        Pune to Mumbai - Mumbai to Pune
+                    </h4>
+                    <br>
+                    <h4><i class="fa fa-car " style="color:#f34900" aria-hidden="true"></i>
+                        Pune to Nashik - Nashik to Pune
+                    </h4>
+                    <br>
+                </div>
+                <div class="col-md-6">
+                    <h4><i class="fa fa-car " style="color:#f34900" aria-hidden="true"></i>
+                        Pune to Aurangabad - Aurangabad to Pune
+                    </h4>
+                    <br>
+                    <h4><i class="fa fa-car " style="color:#f34900" aria-hidden="true"></i>
+                        Pune to Banglore - Banglore to Pune
+                    </h4>
+                    <br>
+                    <h4><i class="fa fa-car " style="color:#f34900" aria-hidden="true"></i>
+                        Pune Local Packages
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--== Fun Fact Area Start ==-->
+<section id="funfact-area" class="overlay section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-11 col-md-12 m-auto">
+                <div class="funfact-content-wrap">
+                    <div class="row">
+                        <!-- Single FunFact Start -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-funfact">
+                                <div class="funfact-icon">
+                                    <i style="color:#f34900" class="fa fa-smile-o"></i>
+                                </div>
+                                <div class="funfact-content">
+                                    <p><span class="counter">5550</span>+</p>
+                                    <h4>HAPPY CLIENTS</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single FunFact End -->
+                        <!-- Single FunFact Start -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-funfact">
+                                <div class="funfact-icon">
+                                    <i style="color:#f34900" class="fa fa-car"></i>
+                                </div>
+                                <div class="funfact-content">
+                                    <p><span class="counter">150</span>+</p>
+                                    <h4>CARS IN STOCK</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single FunFact End -->
+                        <!-- Single FunFact Start -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-funfact">
+                                <div class="funfact-icon">
+                                    <i style="color:#f34900" class="fa fa-bank"></i>
+                                </div>
+                                <div class="funfact-content">
+                                    <p><span class="counter">2</span>+</p>
+                                    <h4>office in cities</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single FunFact End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--== Fun Fact Area End ==-->
+<!--== Our Cars Area Start ==-->
+<section id="our-cars" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <!-- Section Title Start -->
+            <div class="col-lg-12">
+                <div class="section-title  text-center">
+                    <h2 style="color: #f34900;">Our Features</h2>
+                    <span class="title-line"><i class="fa fa-car"></i></span>
+                </div>
+            </div>
+            <!-- Section Title End -->
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="team-content">
+                    <div class="row">
+                        <!-- OurCars Tab Menu start -->
+                        <div class="col-lg-3">
+                            <div class="ourcar-tab-menu">
+                                <ul class="nav nav-tabs" id="ourcartabmenu" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="ourcar_item_1" data-toggle="tab" href="#ourcar_1"
+                                            role="tab" aria-selected="true">Special Precautions For
+                                            COVID19</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="ourcar_item_2" data-toggle="tab" href="#ourcar_2"
+                                            role="tab" aria-selected="true">Clear Car Documents</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="ourcar_item_3" data-toggle="tab" href="#ourcar_3"
+                                            role="tab" aria-selected="true">Good music system</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="ourcar_item_4" data-toggle="tab" href="#ourcar_4"
+                                            role="tab" aria-selected="true">Easy Online Booking</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="ourcar_item_5" data-toggle="tab" href="#ourcar_5"
+                                            role="tab" aria-selected="true">Comfortable</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="ourcar_item_6" data-toggle="tab" href="#ourcar_6"
+                                            role="tab" aria-selected="true">Free Guidance</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- OurCars Tab Menu End -->
+                        <!-- OurCars Tab Content start -->
+                        <div class="col-lg-9">
+                            <div class="tab-content" id="ourcartabcontent">
+                                <!-- Single OurCars  start -->
+                                <div class="tab-pane fade show active" id="ourcar_1" role="tabpanel"
+                                    aria-labelledby="ourcar_item_1">
+                                    <div class="row">
+                                        <div class="col-lg-8 text-center">
+                                            <div class="display-table">
+                                                <div class="display-table-cell">
+                                                    <div class="ourcar-pic">
+                                                        <img src="/assets/img/f1.jpg" alt="9-car clubs Tours & Travel">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="ourcar-info text-center">
+                                                <h2>Special Precautions For COVID19</h2>
+                                                <br>
+                                                <ul class="covid19">
+                                                    <li>Disinfecting of the car after each trip</li>
+                                                    <li>A temperature check will be mandatory for all passengers
+                                                    </li>
+                                                    <li>Driver mask and gloves compulsory.</li>
+                                                    <li>The driver's COVID negative test report before each trip.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single OurCars End -->
+                                <!-- Single OurCars  start -->
+                                <div class="tab-pane fade" id="ourcar_2" role="tabpanel"
+                                    aria-labelledby="ourcar_item_2">
+                                    <div class="row">
+                                        <div class="col-lg-8 text-center">
+                                            <div class="display-table">
+                                                <div class="display-table-cell">
+                                                    <div class="ourcar-pic">
+                                                        <img src="/assets/img/f2.jpg" alt="9-car clubs Tours & Travel">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="ourcar-info text-center">
+                                                <h2>Clear Car Documents</h2>
+                                                <br>
+                                                <ul class="covid19">
+                                                    <li> All Documents clear as par RTO Pune.</li>
+                                                    <li> All the vehicles are registered under the ALL INDIA PERMIT.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single OurCars End -->
+                                <!-- Single OurCars  start -->
+                                <div class="tab-pane fade" id="ourcar_3" role="tabpanel"
+                                    aria-labelledby="ourcar_item_3">
+                                    <div class="row">
+                                        <div class="col-lg-8 text-center">
+                                            <div class="display-table">
+                                                <div class="display-table-cell">
+                                                    <div class="ourcar-pic">
+                                                        <img src="/assets/img/f3.jpg" alt="9-car clubs Tours & Travel">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="ourcar-info text-center">
+                                                <h2>Good music system</h2>
+                                                <br>
+                                                <p>Good music system White in color fitted with excellent upholstery
+                                                    (Covering) and driven by chauffeurs (Motor Chalak) clad (Ghalne
+                                                    Kinva Paridhan Karne) in uniform
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single OurCars End -->
+                                <!-- Single OurCars  start -->
+                                <div class="tab-pane fade" id="ourcar_4" role="tabpanel"
+                                    aria-labelledby="ourcar_item_4">
+                                    <div class="row">
+                                        <div class="col-lg-8 text-center">
+                                            <div class="display-table">
+                                                <div class="display-table-cell">
+                                                    <div class="ourcar-pic">
+                                                        <img src="/assets/img/f4.jpg" alt="9-car clubs Tours & Travel">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="ourcar-info text-center">
+                                                <h2>Easy Online Booking</h2>
+                                                <br>
+                                                <p>Easy online booking system available at 9-car clubs Tours &
+                                                    Travel and we provide a help desk 24 * 7.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single OurCars End -->
+                                <!-- Single OurCars  start -->
+                                <div class="tab-pane fade" id="ourcar_5" role="tabpanel"
+                                    aria-labelledby="ourcar_item_5">
+                                    <div class="row">
+                                        <div class="col-lg-8 text-center">
+                                            <div class="display-table">
+                                                <div class="display-table-cell">
+                                                    <div class="ourcar-pic">
+                                                        <img src="/assets/img/f6.jpg" alt="9-car clubs Tours & Travel">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="ourcar-info text-center">
+                                                <h2>Comfortable</h2>
+                                                <br>
+                                                <p>Journeys as great as the destinations. and
+                                                    Comfort is a high priority of 9-car clubs Tours & Travel for a
+                                                    pleasant
+                                                    Journey.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single OurCars End -->
+                                <!-- Single OurCars  start -->
+                                <div class="tab-pane fade" id="ourcar_6" role="tabpanel"
+                                    aria-labelledby="ourcar_item_5">
+                                    <div class="row">
+                                        <div class="col-lg-8 text-center">
+                                            <div class="display-table">
+                                                <div class="display-table-cell">
+                                                    <div class="ourcar-pic">
+                                                        <img src="/assets/img/f5.jpg" alt="9-car clubs Tours & Travel">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="ourcar-info text-center">
+                                                <h2>Free Guidance</h2>
+                                                <br>
+                                                <p>Travel with an expert travel Guide, to make your trip awesome
+                                                    !
+                                                </p>
+                                                <br>
+                                                <p>The perfect partner of your journey.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single OurCars End -->
+                            </div>
+                        </div>
+                        <!-- OurCars Tab Content End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--
+<table style="width:750px;margin:0 auto;border:2px solid black;border-spacing:3px">
+    <tbody>
+    <tr>
+    <td><img border="0"></td>
+    <td style="vertical-align:top;text-align:center;padding-top:5px">
+    <h2 style="font-size:19px">9 CAR CLUB</h2>
+    <p style="font-size:12px">Office No.5, Dealing Center, Near Ashray Hotel, Mitra Mandal Chowk, <br>Swargate, Pune 411009</p>
+    <span style="font-size:19px;padding-top:20px;display:block">E-Reservation Ticket</span></td>
+    <td style="text-align:center;padding-top:5px;vertical-align:top">
+    <div style="vertical-align:top">
+    <p style="font-size:12px">Contact: 7022222220 / 7066333330<br>Helpline No.:9075086086<br>Email: <a href="mailto:helpline@9carclub.com" target="_blank">helpline@9carclub.com</a></p>
+    </div>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding:5px 0 5px 3px" colspan="2"><span style="font-weight:bold">Trip Information</span></td>
+    <td colspan="1">Booking Date: 10-08-2020</td>
+    </tr>
+    <tr>
+    <td colspan="3">
+    <table style="width:100%;border-spacing:0;border:1px solid black;font-size:12px">
+    <tbody>
+    <tr style="border:1px solid black">
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px 10px">Trip Number :</td>
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px 10px"><span>9CCET39</span></td>
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px 10px">Aprrox. Boarding Time :</td>
+    <td style="padding:5px 10px;border-bottom:1px solid black"><span>12:00 Hrs.</span></td>
+    </tr>
+    <tr style="border:1px solid black;padding:5px 10px">
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px 10px">Ticket Number :</td>
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px 10px"><span>39</span></td>
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px 10px">Booking Type :</td>
+    <td style="padding:5px 10px;border-bottom:1px solid black"><span>Round Way Trip</span></td>
+    </tr>
+    <tr style="border:1px solid black;padding:5px 10px">
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px 10px">Service Start Place :</td>
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px 10px"><span>Kharadi, Pune, Maharashtra, India</span></td>
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px 10px">Service End Place :</td>
+    <td style="padding:5px 10px;border-bottom:1px solid black"><span>Belgaum, Karnataka, India</span></td>
+    </tr>
+    <tr style="border:1px solid black;padding:5px 10px">
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px 10px">Passenger Boarding Point :</td>
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px 10px"><span>kharadi pune</span></td>
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px 10px">Passenger Dropping Point :</td>
+    <td style="padding:5px 10px;border-bottom:1px solid black"><span>Belgaum Karnataka</span></td>
+    </tr>
+    <tr style="border:1px solid black;padding:5px 10px">
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px 10px">Date of Journey :</td>
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px 10px"><span>09-08-2020</span></td>
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px 10px">Departure time from Starting Point :</td>
+    <td style="padding:5px 10px;border-bottom:1px solid black"><span>12:00 Hrs.</span></td>
+    </tr>
+    <tr style="border:1px solid black;padding:5px 10px">
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px 10px">Cab Type :</td>
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px 10px"><span>SEDAN CAB - Dzire</span></td>
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px 10px">No of Passangers :</td>
+    <td style="padding:5px 10px;border-bottom:1px solid black"><span>2</span></td>
+    </tr>
+    </tbody>
+    </table>
+    </td>
+    </tr>
+    <tr>
+    <td colspan="3"><span style="font-weight:bold;padding-left:3px">Passengers Information</span></td>
+    </tr>
+    <tr>
+    <td colspan="3">
+    <table style="width:100%;border-spacing:0;border:1px solid black;font-size:12px">
+    <tbody>
+    <tr style="border:1px solid black;font-weight:bold">
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px">SR No.</td>
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px">Name</td>
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px">Mobile No.</td>
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px">Email ID</td>
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px">Booking Status</td>
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:5px">Waiting List No</td>
+    </tr>
+    <tr style="border:1px solid black">
+    <td style="border-right:1px solid black;padding:3px;text-align:center">1</td>
+    <td style="border-right:1px solid black;padding:3px;text-align:center">Yallappa Hattikar</td>
+    <td style="border-right:1px solid black;padding:3px;text-align:center">9146167526</td>
+    <td style="border-right:1px solid black;padding:3px;text-align:center"><a href="mailto:swatimane19151@gmail.com" target="_blank">swatimane19151@gmail.com</a></td>
+    <td style="border-right:1px solid black;padding:3px;text-align:center">Full payment done</td>
+    <td style="border-right:1px solid black;padding:3px;text-align:center">----</td>
+    </tr>
+    </tbody>
+    </table>
+    </td>
+    </tr>
+    <tr>
+    <td colspan="3"><span style="font-weight:bold;padding-left:3px">Total Fare Details</span></td>
+    </tr>
+    <tr>
+    <td colspan="3">
+    <table style="width:100%;border-spacing:0;border:1px solid black;font-size:12px">
+    <tbody>
+    <tr style="border:1px solid black;padding:5px">
+    <td style="border-right:1px solid black;border-bottom:1px solid black;width:30%;padding:10px">Pickup + Drop in Kms = Total Kms</td>
+    <td style="text-align:right;padding:10px;border-bottom:1px solid black"><span>708</span></td>
+    </tr>
+    <tr style="border:1px solid black;padding:5px">
+    <td style="border-right:1px solid black;border-bottom:1px solid black;width:30%;padding:10px">Total KMs * Rate Per KMs = Basic Fare</td>
+    <td style="text-align:right;padding:10px;border-bottom:1px solid black"><span>[708*13.5] = 9000.0</span></td>
+    </tr>
+    <tr style="border:1px solid black;padding:5px">
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:10px">Reservation Charge :</td>
+    <td style="text-align:right;padding:10px;border-bottom:1px solid black"><span>0</span></td>
+    </tr>
+    <tr style="border:1px solid black;padding:5px">
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:10px">GST :</td>
+    <td style="text-align:right;padding:10px;border-bottom:1px solid black"><span>0</span></td>
+    </tr>
+    <tr style="border:1px solid black;padding:5px">
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:10px">Total Chargeable Amount:</td>
+    <td style="text-align:right;padding:10px;border-bottom:1px solid black"><span>9000.0</span></td>
+    </tr>
+    <tr style="border:1px solid black;padding:5px">
+    <td style="border-right:1px solid black;border-bottom:1px solid black;padding:10px">Total Chargeable Amount - Paid Amount = Pending Amount:</td>
+    <td style="text-align:right;padding:10px;border-bottom:1px solid black"><span>[9000.0-9000.0] = 0.0</span></td>
+    </tr>
+    </tbody>
+    </table>
+    </td>
+    </tr>
+    <tr>
+    <td style="font-weight:bold;font-size:11px" colspan="3">
+    <div style="margin-left:2px">Terms &amp; Conditions:<br>
+    <div style="margin-left:15px">
+    <ul style="list-style:disc;margin-left:0;padding-left:0">
+    <li>This E-Ticket is not transferable. This E-Ticket is valid only for the details specified above. The passenger having this E-Ticket required to carry print out of this E-Ticket or to show the soft copy of E-Ticket or E-Ticket SMS sent by 9 CAR CLUB/AGENT on his Mobile, Tab , Laptop, etc. Along with Photo ID Card in original like Voter ID, Pan Card, Adhar Card, Driving License, Passport etc</li>
+    <li>Corporation reserves the rights to change/cancel the CAB service mentioned in the E-Ticket.</li>
+    <li>Passenger will have to pay the fare difference if any in case of Revision of fare or Change of Service.</li>
+    <li>
+    <div>Cancellation Rules &amp; Refund Procedure for E-Tickets : E-Ticket cancellation is permitted through 9 CAR CLUB site(<a href="http://9carclub.com" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://9carclub.com&amp;source=gmail&amp;ust=1617453481569000&amp;usg=AFQjCNHguJG8Ii-wD5nXrWh0o61PKfSQvg">www.9carclub.com</a>). Cancellation is allowed before 4 hours of scheduled departure time. In case, if passenger is absent for journey, no refund will be given to the passenger. Following cancellation charges are applicable.<br> I) 10% ticket fare will get deducted if the ticket is cancelled 24 hrs. before the departure time.<br> II) 25% ticket fare will get deducted if the ticket is cancelled 12 hrs. before the departure time.<br> III) 50% ticket fare will get deducted if the ticket is cancelled 4 hrs. before the departure time.<br> Reservation charges and convenience charges including GST charge are not refundable.</div>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <div style="text-align:center;margin-bottom:10px">
+    <div style="margin-bottom:2px">Wish You Happy Journey</div>
+    <div style="margin-bottom:2px">For more detail visit us @ <a href="http://www.9carclub.com" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://www.9carclub.com&amp;source=gmail&amp;ust=1617453481569000&amp;usg=AFQjCNEdMOduDX1yRI3YSyhWT162zpv4bA">www.9carclub.com</a></div>
+    <div style="margin-bottom:2px">Send your support emails to: <a href="mailto:helpline@9carclub.com" target="_blank">helpline@9carclub.com</a></div>
+    <div>Powered by Rameshwar Chavan.</div>
+    </div>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+
+ -->

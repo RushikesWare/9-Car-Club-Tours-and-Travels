@@ -1,0 +1,171 @@
+<section class="invoice-header">
+    <div class="container">
+        <div class="row">
+            <!-- Page Title Start -->
+            <div class="col-lg-12">
+                <div class="section-title  text-center">
+                    <h2 style="font-size: 30px;">Invoice Form </h2>
+                    <span class="title-line"><i class="fa fa-car"></i></span>
+                    <p>Welcome to 9 Car Club Tours and Travels</p>
+                </div>
+            </div>
+            <!-- Page Title End -->
+        </div>
+    </div>
+</section> 
+<div class="container">
+    <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 my-4 invoice-form">
+        <form  #invoiceForm="ngForm" name="invoiceForm" #invoiceForm.reset()>
+            <div class="row">
+                <div class="col-md-12 text-center pb-2 mb-2" style="border-bottom: 1px solid rgb(105, 105, 105);">
+                    <h4>9 CAR CLUB</h4>
+                </div>
+                <div class="col-md-12 p-3 text-center">
+                    <h5>Trip Information</h5>
+                </div>
+
+                
+                <div class="col-md-4 form-group">
+                    <label for="Trip">Trip Number :*</label>
+                    <input type="text" id="TripNumber"  [(ngModel)]="invoiceModel.TripNumber" class="form-control" name="TripNumber"
+                        placeholder=" Ex. 9CCET39">
+                </div>
+                <div class="col-md-4 form-group">
+                    <label for="Aprrox. Boarding Time">	Aprrox. Boarding Time :</label>
+                    <input type="time" id="BoardingTime" class="form-control" name="BoardingTime"  [(ngModel)]="invoiceModel.BoardingTime"
+                        placeholder=" Enter Boarding Time">
+                </div>
+                <div class="col-md-4 form-group">
+                    <label for="Ticket-Number">	Ticket Number :</label>
+                    <input type="number" id="TicketNumber" class="form-control" name="TicketNumber" [(ngModel)]="invoiceModel.TicketNumber"
+                        placeholder=" Enter Ticket Number">
+                </div>
+
+                <div class="col-md-6 form-group">
+                    <label for="to-city">Service Start Place : </label>
+                    <input type="text" id="pickup" class="form-control" name="pickup" [(ngModel)]="invoiceModel.pickup"
+                        placeholder="Kharadi, Pune">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="to-city">Service End Place :</label>
+                    <input type="text" id="drop" class="form-control" name="drop" [(ngModel)]="invoiceModel.drop"
+                        placeholder="Taj Hotel, Mumbai">
+                </div>
+                <div class="col-md-6 form-group ">
+                    <label for="pickup">Date of Journey : </label>
+                    <input type="date" class="form-control" name="pickupdate" [(ngModel)]="invoiceModel.pickupdate"
+                        id="pickupdate" placeholder="DD/MM/YYYY - HH:MM">
+                </div>
+                <div class="col-md-6 form-group ">
+                    <label for="pickup">Departure time from Starting Point : </label>
+                    <input type="time" class="form-control" name="pickuptime" [(ngModel)]="invoiceModel.pickuptime"
+                        id="pickuptime" placeholder="HH:MM">
+                </div>
+                <div class="col-md-4 form-group ">
+                    <label for="passangers">No of Passangers: </label>
+                    <input type="number" class="form-control" name="passangers"  [(ngModel)]="invoiceModel.passangers"
+                        id="passangers" placeholder="Passangers">
+                </div>
+                <div class="col-md-4 form-group ">
+                    <label for="time">Cab Type: </label>
+                    <select name="carType" class="form-control" id="carType" [(ngModel)]="invoiceModel.carType">
+                        <option value="All Cars">Select</option>
+                        <option value="hatchback">HATCHBACK</option>
+                        <option value="sedan">SEDAN</option>
+                        <option value="xuvcar">SUV CAR</option>
+                        <option value="luxury">PREMIUM LUXURY</option>
+                    </select>
+                </div>
+                <div class="col-md-4 form-group ">
+                    <label for="time">Journey Type: </label>
+                    <select name="journey" id="journey" class="form-control" [(ngModel)]="invoiceModel.journey">
+                        <option value="Select">Select</option>
+                        <option value="One-Way">One Way</option>
+                        <option value="Outstation">Outstation</option>
+                        <option value="local">Local</option>
+                        <option value="airport">Airport</option>
+                    </select>
+                </div>
+                <div class="col-md-12 p-3 text-center">
+                    <h5>Passenger Information</h5>
+                </div>
+                <div class="col-md-4 form-group">
+                    <label for="fullName"> Passenger Name:*</label>
+                    <input type="text" class="form-control" name="fullName" id="fullName" [(ngModel)]="invoiceModel.fullName" >
+                </div>
+                <div class="col-md-4 form-group">
+                    <label for="Email">E-Mail:*</label>
+                    <input type="email" class="form-control" name="email" id="email" [(ngModel)]="invoiceModel.email"
+                        placeholder="Enter Passenger Email">
+                </div>
+                <div class="col-md-4 form-group">
+                    <label for="form-city">Mob. Number :*</label>
+                    <input type="tel" id="mobnumber" class="form-control" name="mobnumber" [(ngModel)]="invoiceModel.mobnumber"
+                        placeholder=" Enter Mob. Number">
+                </div>
+                <div class="col-md-6 form-group ">
+                    <label for="Status">	Booking Status: </label>
+                    <select name="paymentStatus" id="paymentStatus"  class="form-control" [(ngModel)]="invoiceModel.paymentStatus">
+                        <option value="none payment">------</option>
+                        <option value="full-payment">Full Payment Done</option>
+                        <option value="half-payment">Half Payment Done</option>
+                        <option value="zero-payment">Zero Payment</option>
+                    </select>
+                </div>
+                <div class="col-md-6 form-group ">
+                    <label for="Waiting">Waiting List No : </label>
+                    <input type="number" id="waiting"  class="form-control" name="waiting" [(ngModel)]="invoiceModel.waiting"
+                        placeholder=" -------">
+                </div>
+                <div class="col-md-12 p-3 text-center">
+                    <h5>Total Fare Details</h5>
+                </div>
+                <div class="col-md-6 form-group ">
+                    <label for="Total-Km">Pickup + Drop in Kms = Total Kms :</label>
+                    <input type="text" id="totalKm" class="form-control" name="totalKm" [(ngModel)]="invoiceModel.totalKm"
+                        placeholder="Enter Total Km : 708">
+                </div>
+                <div class="col-md-6 form-group ">
+                    <label for="Basic-Fare">Total KMs * Rate Per KMs = Basic Fare :*</label>
+                    <input type="text" id="basicFire" class="form-control" name="basicFire" [(ngModel)]="invoiceModel.basicFire"
+                        placeholder="[708*13.5] = 9000.0">
+                </div>
+                <div class="col-md-6 form-group ">
+                    <label for="Reservation-Charge">Reservation Charge :</label>
+                    <input type="text" id="reservCharge" class="form-control" name="reservCharge" [(ngModel)]="invoiceModel.reservCharge"
+                        placeholder="Enter Reservation Charge : 0">
+                </div>
+                <div class="col-md-6 form-group ">
+                    <label for="GST">GST :</label>
+                    <input type="text" id="GST" class="form-control" name="GST" [(ngModel)]="invoiceModel.GST"
+                        placeholder="Enter GST : 0">
+                </div>
+                <div class="col-md-4 form-group ">
+                    <label for="Chargeable-amout">Total Chargeable Amount:</label>
+                    <input type="text" id="chargeAmnt" class="form-control" name="chargeAmnt" [(ngModel)]="invoiceModel.chargeAmnt"
+                        placeholder="Enter Chargeable Amout">
+                </div>
+                <div class="col-md-4 form-group ">
+                    <label for="Chargeable-amout">Total Chargeable Amount - Paid Amount = Pending Amount:</label>
+                    <input type="text" id="pendingAmnt" class="form-control" name="pendingAmnt" [(ngModel)]="invoiceModel.pendingAmnt"
+                        placeholder="Enter Pending Amount [9000.0-9000.0] = 0.0">
+                </div>
+                <div class="col-md-4 text-center">
+                    <label for="Trip"> <b>Booking Date :</b>*</label>
+                  <input type="date"  id="bookingDate"  [(ngModel)]="invoiceModel.bookingDate" class="form-control" name="bookingDate">
+                </div>
+                <div class="col-md-12 form-group text-center mt-4">
+                    <label for=""></label>
+                    <!-- <input type="submit" style="background-color: #f34900; color: #fff;" value="Send Invoice" class="btn  btn-lg"> -->
+                        <button class="btn  btn-lg" type="submit" style="background-color: #f34900; width: 80%; color: #fff;" [disabled]="invoiceModel.TripNumber == null || invoiceModel.basicFire == null || invoiceModel.mobnumber==null || invoiceModel.email==null || invoiceModel.bookingDate==null" (click)="sendMail()"> Send Invoice</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+    <!-- <div class="col-md-1"></div> -->
+
+</div>

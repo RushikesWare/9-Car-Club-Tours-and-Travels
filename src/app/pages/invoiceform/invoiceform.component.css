@@ -1,0 +1,28 @@
+.invoice-header{
+    background: #ff4f04;
+    color: white;
+}
+.section-title h2{
+    color: white;
+
+}
+.invoice-form form{
+    padding: 20px;
+    border-radius: 5px; 
+    box-shadow: 0px 1px 7px 0px black;
+}
+
+.invoice-form form select{
+    border: 1px solid #f34900 !important;
+      width: 100%;
+      padding: 8px;
+  }
+.invoice-form form input{
+    border: 1px solid #f34900 !important;
+      width: 100%;
+      padding: 8px;
+  }
+  .invoice-form form h5{
+      border-bottom: 1.5px solid #f30000;
+      padding-bottom: 1%;
+  }

@@ -1,0 +1,469 @@
+
+    <div id="fixed-social-call">
+        <div>
+            <a href="tel: +91 9325423346" class="fixed-call pulse-button" ><i
+                    class="fa fa-phone"></i></a>
+        </div>
+    </div>
+    <div id="fixed-social-whatsapp">
+        <div>
+            <a href="https://api.whatsapp.com/send?phone=+91 9325423346" class="fixed-call-whatsapp pulse-button-w" ><i
+                    class="fa fa-whatsapp"></i> </a>
+        </div>
+    </div>
+    <!--== Page Title Area Start ==-->
+    <section id="page-title-area" class="section-padding overlay">
+        <div class="container">
+            <div class="row">
+                <!-- Page Title Start -->
+                <div class="col-lg-12">
+                    <div class="section-title  text-center">
+                        <h2 style="font-size: 30px;">Book A Cabs</h2>
+                        <span class="title-line"><i class="fa fa-car"></i></span>
+                        <!-- <p>Welcome to Shree Ganesh Tours & Travels.</p> -->
+                    </div>
+                </div>
+                <!-- Page Title End -->
+            </div>
+        </div>
+    </section>
+    <!--== Page Title Area End ==-->
+
+    <!--== Booking page Content Start ==-->
+    <section id="about-area" class="section-padding">
+        <div class="container">
+            <h3 class="text-center pt-3 onl-booking">Online Booking Details and Form</h3><br> <br>
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="containerw3layouts-agileits">
+
+                        <h2 class="to-reserve-the">To reserve the ride, please complete and submit the booking form.</h2>
+
+                        <div class="w3layoutscontactagileits my-4">
+                            <!-- <form >
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <h4>Book a Car </h4>
+                                    </div>
+                                    <div class="col-md-12 form-group">
+                                        <label for="form-city">Name:</label>
+                                        <input type="text" id="name" class="form-control" name="name"
+                                            placeholder=" Enter Your Name">
+                                    </div>
+                                    <div class="col-md-12 form-group">
+                                        <label for="Email">E-Mail:</label>
+                                        <input type="email" class="form-control" name="eaddress" id="eaddress"
+                                            placeholder="Enter Your Email">
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="to-city">Pick-Up Location: </label>
+                                        <input type="text" id="pick-up" class="form-control" name="pick-up"
+                                            placeholder="Pune">
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="to-city">Drop Location: </label>
+                                        <input type="text" id="drop" class="form-control" name="drop"
+                                            placeholder="Mumbai">
+                                    </div>
+                                    <div class="col-md-6 form-group ">
+                                        <label for="pickup">Pick-Up Date: </label>
+                                        <input type="date" class="form-control" name="pickupdate"
+                                            id="pickupdate" placeholder="DD/MM/YYYY - HH:MM">
+                                    </div>
+                                    <div class="col-md-6 form-group ">
+                                        <label for="pickup">Pick-Up Time: </label>
+                                        <input type="time" class="form-control" name="pickupdate"
+                                            id="pickupdate" placeholder="HH:MM">
+                                    </div>
+                                    <div class="col-md-12 form-group ">
+                                        <label for="passangers">No of Passangers: </label>
+                                        <input type="number" class="form-control" name="passangers"
+                                            id="passangers" placeholder="Passangers">
+                                    </div>
+                                    <div class="col-md-6 form-group ">
+                                        <label for="time">Car Type: </label>
+                                        <select name="journey" class="form-control">
+                                            <option value="All Cars">Select</option>
+                                            <option value="hatchback">HATCHBACK</option>
+                                            <option value="sedan">SEDAN</option>
+                                            <option value="xuvcar">SUV CAR</option>
+                                            <option value="luxury">PREMIUM LUXURY</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 form-group ">
+                                        <label for="time">Journey Type: </label>
+                                        <select name="journey" class="form-control">
+                                            <option value="Select">Select</option>
+                                            <option value="One-Way">One Way</option>
+                                            <option value="Outstation">Outstation</option>
+                                            <option value="local">Local</option>
+                                            <option value="airport">Airport</option>
+                                        </select>
+                                    </div>
+                                 
+                                    <div class="col-md-12 form-group  mt-4">
+                                        <label for=""></label>
+                                        <input type="submit" style="background-color: #f34900;" value="Book Cab"
+                                            class="btn  btn-lg">
+                                    </div>
+                                </div>
+                            </form> -->
+                            <form   #bookingForm="ngForm" name="bookingForm" >
+
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <h4>Book a Car </h4>
+                                    </div>
+                                    <div class="col-md-12 form-group">
+                                        <label for="form-city">Name:</label>
+                                        <input type="text"  name="name"  id="name" [(ngModel)]="bookingModel.name"  class="form-control" placeholder=" Enter Your Name" required>
+                                    </div>
+                                    <div class="col-md-7 form-group">
+                                        <label for="Email">E-Mail:</label>
+                                        <input type="email" class="form-control" name="eaddress"  id="eaddress" [(ngModel)]="bookingModel.eaddress" name="eaddress" placeholder="Enter Your Email" required>
+                                    </div>
+                                    <div class="col-md-5 form-group">
+                                        <label for="mob">Mobile No:</label>
+                                        <input type="tel" class="form-control" name="tel"  id="tel" [(ngModel)]="bookingModel.tel" name="tel" placeholder="Enter Your Mobile No." required>
+                                    </div>
+                                     <div class="col-md-6 form-group">
+                                        <label for="to-city">Pick-Up Location: </label>
+                                        <input type="text" class="form-control" name="pickup" id="pickup" [(ngModel)]="bookingModel.pickup"  placeholder="Pune" required>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="to-city">Drop Location: </label>
+                                        <input type="text"  class="form-control" name="drop" id="drop" [(ngModel)]="bookingModel.drop" placeholder="Mumbai" required>
+                                    </div>
+                                    <div class="col-md-6 form-group ">
+                                        <label for="pickup">Pick-Up Date: </label>
+                                        <input type="date" class="form-control" name="pickupdate" id="pickupdate" [(ngModel)]="bookingModel.pickupdate"  placeholder="DD/MM/YYYY - HH:MM">
+                                    </div>
+                                    <div class="col-md-6 form-group ">
+                                        <label for="pickup">Pick-Up Time: </label>
+                                        <input type="time" class="form-control" name="pickuptime" id="pickuptime" [(ngModel)]="bookingModel.pickuptime"  placeholder="HH:MM">
+                                    </div>
+                                    <div class="col-md-12 form-group ">
+                                        <label for="passangers">No of Passangers: </label>
+                                        <input type="number" class="form-control" name="passangers" id="passangers" [(ngModel)]="bookingModel.passangers"  placeholder="Passangers">
+                                    </div>
+                                    <div class="col-md-6 form-group ">
+                                        <label for="time">Car Type: </label>
+                                        <select class="form-control"  name="cartype" id="cartype" [(ngModel)]="bookingModel.cartype" >
+                                            <option value="All Cars">Select</option>
+                                            <option value="Hatchback">HATCHBACK</option>
+                                            <option value="Sedan">SEDAN</option>
+                                            <option value="Suv car">SUV CAR</option>
+                                            <option value="Luxury">PREMIUM LUXURY</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 form-group ">
+                                        <label for="time">Journey Type: </label>
+                                        <select  class="form-control"  name="journeytype" id="journeytype" [(ngModel)]="bookingModel.journeytype">
+                                            <option value="Select">Select</option>
+                                            <option value="One-Way">One Way</option>
+                                            <option value="Outstation">Outstation</option>
+                                            <option value="local">Local</option>
+                                            <option value="airport">Airport</option>
+                                        </select>
+                                    </div> 
+        
+                                    <div class="col-md-12 form-group mt-2">
+                                        <label for=""></label>
+                                       <button class="btn  btn-lg" type="submit" style="background-color: #f34900; width: 100%;" [disabled]="!bookingForm.valid" (click)="sendMail()"> Book Cab</button>
+                                        <!-- <input type="submit" style="background-color: #f34900;"value="Book Cab" class="btn  btn-lg"> -->
+                                    </div>
+                                </div>
+                            </form> 
+                        </div>
+                    </div>
+                    <div>
+                        <div class="terms col-lg-12">
+                            <h5>Terms And Conditions:</h5>
+                            <ul>
+                                <li> <i class="fa fa-angle-double-right"></i> &nbsp; Day calculated from 06:00 a.m. to
+                                    00:00 a.m. hrs</li>
+                                <li> <i class="fa fa-angle-double-right"></i> &nbsp; After 00:00 a.m. hrs, charge will be
+                                    Rs. 200 per hrs</li>
+                                <li> <i class="fa fa-angle-double-right"></i> &nbsp; Daily Driver allowance will be
+                                    charged Rs. 300</li>
+                                <li> <i class="fa fa-angle-double-right"></i> &nbsp; Office to Office will add 15 km.
+                                </li>
+                                <li> <i class="fa fa-angle-double-right"></i> &nbsp; The minimum average per day is 300 km
+                                </li>
+                                <li><i class="fa fa-angle-double-right"></i> &nbsp; <span
+                                        style="font-weight: bold;">Cancellation Policy:</span> The cancellation of
+                                        the journey will be informed
+                                    before 48 hrs of your actual journey,a 10% cancellation fee will be taken off your
+                                    total journey fare.</li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                    <div>
+
+                    </div>
+                </div>
+
+                <!-- Booking Form End -->
+
+
+
+
+
+
+                <!-- Tips Start -->
+                <div class="col-lg-5">
+                    <h2 style="font-size: 25px; color: red;">Special Precautions For COVID-19</h2>
+                    <div class="covidli">
+                        <ul>
+                            <li> <i class="fa fa-arrow-circle-right"></i> &nbsp; Disinfecting of the car after each
+                                trip.</li>
+                            <li> <i class="fa fa-arrow-circle-right"></i> &nbsp; A temperature check will be mandatory
+                                for all passengers.</li>
+                            <li> <i class="fa fa-arrow-circle-right"></i> &nbsp; Driver mask and gloves compulsory.</li>
+                            <li> <i class="fa fa-arrow-circle-right"></i> &nbsp; The driver's COVID negative test report
+                                before each trip.</li>
+
+                        </ul>
+                    </div>
+                    <br>
+                    <div>
+                        <h2 class="pune-mum">PUNE - MUMBAI AIRPORT / MUMBAI AIRPORT PUNE TRANSFERS:</h2>
+                        <table class="table  table-responsive table-responsive{-sm|-md|-lg|-xl}  table-bordered text-capitalize" style="    line-height: 1;">
+                            <thead>
+                                <tr style="background-color:  #f34900;">
+                                    <th style="width: 200px;">Car Type</th>
+                                    <th style="width: 10px;">Seating Size</th>
+                                    <th>One Way</th>
+                                    <th>Return</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Swift or Xcent</td>
+                                    <td>4</td>
+                                    <td> 2700</td>
+                                    <td>4000</td>
+                                </tr>
+                                <tr>
+                                    <td>Toyota Etios </td>
+                                    <td>4</td>
+                                    <td> 3000
+                                    </td>
+                                    <td>4500
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ertica </td>
+                                    <td>4</td>
+                                    <td> 3200
+                                    </td>
+                                    <td>5000/-
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Mahindra Xylo </td>
+                                    <td>6</td>
+                                    <td> 3500
+                                    </td>
+                                    <td>5000/-
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Toyota Innova</td>
+                                    <td>6</td>
+                                    <td> 4000
+                                    </td>
+                                    <td>6500/-
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Toyota Innova Crysta</td>
+                                    <td>6</td>
+                                    <td> 4500
+
+                                    </td>
+                                    <td>7500/-
+
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+                        <br>    
+                        <h2 class="notes" style="text-align: left;">Notes:</h2>
+                        <div class="terms">
+                            <ul>
+                                <li> <i class="fa fa-angle-double-right"></i> &nbsp; Above Prices is exclusive of
+                                    Highway Toll & Taxes</li>
+                                <li> <i class="fa fa-angle-double-right"></i> &nbsp; For Pick up from Mumbai Airport, One
+                                    time Parking charges are excluded</li>
+                                <li> <i class="fa fa-angle-double-right"></i> &nbsp; In case of return journeys, 1/2 hr
+                                    to 1 hr is complimentary at the Airport</li>
+                                <li> <i class="fa fa-angle-double-right"></i> &nbsp; After That Rs.200/- per hr will be
+                                    charged extra for halting.</li>
+                                <li> <i class="fa fa-angle-double-right"></i> &nbsp; The Return trip has to be completed on
+                                    the same day within 12 hours.</li>
+                            </ul>
+                            <p style="color: red; background-color: yellow;">Cancellation on the day of travel will be
+                                charged 50%.</p>
+                        </div>
+                    </div>
+                    <!-- <div>
+                        <img src="/assets/img/home-2-abou.jpg" alt="">                       
+                    </div> -->
+                </div>
+                <!-- Tips End -->
+            </div>
+        </div>
+        
+    </section>
+    <section>
+        <div class="container">
+            <h2 class="please-check">Please Check Bellow rete cards for different packages and Cars</h2>
+            <br><br>
+            <div class="row">
+                <div class="col-lg-5">
+                    <h2 class="notes" style="text-align: left; text-transform: uppercase;">Vehicle Outstation rates:</h2>
+                   
+                    <table class="table table-responsive table-responsive{-sm|-md|-lg|-xl} table-bordered text-capitalize " style="    line-height: 1;">
+                        <thead>
+                            <tr style="width: 200px;background-color:  #f34900;">
+                                <th >Car Type</th>
+                                <th style="width: 10px;">Seating Size</th>
+                                <th>Rate/Km</th>
+                                <th> Driver Allowance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Swift or Xcent</td>
+                                <td>4</td>
+                                <td> 11/-</td>
+                                <td>300</td>
+                            </tr>
+                            <tr>
+                                <td>Toyota Etios </td>
+                                <td>4</td>
+                                <td> 12/-
+                                </td>
+                                <td>300
+                                </td>
+                            </tr>
+                            <tr> 
+                                <td>Ertica </td>
+                                <td>5</td>
+                                <td> 12/-
+                                </td>
+                                <td>300/-
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mahindra Xylo </td>
+                                <td>6</td>
+                                <td> 13/-
+                                </td>
+                                <td>300/-
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Toyota Innova</td>
+                                <td>6</td>
+                                <td> 14/-
+                                </td>
+                                <td>300/-
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Toyota Innova Crysta</td>
+                                <td>6</td>
+                                <td> 16/-
+
+                                </td>
+                                <td>300/-
+
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-5">
+                    <h2 class="notes" style="text-align: left; text-transform: uppercase;">Vehicle Local rates for AC Cars</h2>
+                    <table class="table  table-responsive table-responsive{-sm|-md|-lg|-xl}  table-bordered text-capitalize" style="    line-height: 1;">
+                        <thead>
+                            <tr style="width: 200px;background-color:  #f34900;">
+                                <th style="width: 150px;">Car Models</th>
+                                <th>8 Hrs/ 80Km</th>
+                                <th>Extra Rate/Hr</th>
+                                <th> Extra Rate/Km</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Swift or Xcent</td>
+                                <td>1400</td>
+                                <td> 100</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>Toyota Etios </td>
+                                <td>1600</td>
+                                <td> 120/-
+                                </td>
+                                <td>12
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ertica </td>
+                                <td>1800
+                                </td>
+                                <td> 120/-
+                                </td>
+                                <td>12/-
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mahindra Xylo </td>
+                                <td>2200</td>
+                                <td> 120/-
+                                </td>
+                                <td>14/-
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Toyota Innova</td>
+                                <td>2400</td>
+                                <td> 120/-
+                                </td>
+                                <td>15/-
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Toyota Innova Crysta</td>
+                                <td>2800</td>
+                                <td> 150/-
+
+                                </td>
+                                <td>16/-
+
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!--== Booking page Content End ==-->

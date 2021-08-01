@@ -1,0 +1,49 @@
+<mat-nav-list class="back   "  style="overflow: hidden;">
+
+
+
+    <h2 matSubheader class="headingstyle"><b>Admin</b></h2>
+    <mat-divider></mat-divider>
+
+    <a class="title1" mat-list-item routerLinkActive="list-item-active" routerLink="/layout/dashboard">
+        <mat-icon class="sideicon">dashboard</mat-icon>&nbsp;
+        Dashboard
+    </a>
+    <mat-divider></mat-divider>
+
+    <a class="title1" mat-list-item routerLinkActive="list-item-active" routerLink="/forms">
+        <mat-icon class="sideicon">local_post_office</mat-icon>&nbsp;
+        Daily Dashboard
+    </a>
+    <mat-divider></mat-divider>
+     
+
+    <mat-divider></mat-divider>
+    <mat-icon class="childrouting ">chrome_reader_mode</mat-icon>
+    <a href="#pageSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle side">Masters <mat-icon
+            class="drop ">arrow_drop_down</mat-icon></a>
+    <ul class="collapse list-unstyled" id="pageSubmenu1">
+
+  
+        <a routerLink="/layout/booksizelist">
+            <li class="side1 ">
+               Book Size
+            </li>
+        </a>
+    </ul>
+
+ <mat-divider></mat-divider>
+    <mat-icon class="childrouting ">chrome_reader_mode</mat-icon>
+    <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle side">Reports <mat-icon
+            class="drop">arrow_drop_down</mat-icon></a>
+    <ul class="collapse list-unstyled" id="pageSubmenu4">
+        <a routerLink="/layout/monthlyorderreport">
+            <li class="side1"> 
+                Monthly Repory
+            </li>
+        </a>
+    </ul>  
+    <mat-divider></mat-divider>
+</mat-nav-list>
+
+ 
